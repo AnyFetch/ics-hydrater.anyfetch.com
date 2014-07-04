@@ -21,7 +21,7 @@ after(function() {
 });
 
 describe('Check results of ICS hydrater', function() {
-  it('don\'t have errors', function(done) {
+  it('should not have error', function(done) {
     var document = {
       identifier: 'test',
       access_token: 'test',
@@ -40,12 +40,12 @@ describe('Check results of ICS hydrater', function() {
     });
   });
 
-  it('check numbers of document created', function(done) {
+  it('check numbers of created document', function(done) {
     spyPost.callCount.should.eql(9);
     done();
   });
 
-  it('check numbers of document deleted', function(done) {
+  it('check numbers of deleted document', function(done) {
     spyDelete.callCount.should.eql(1);
     done();
   });
