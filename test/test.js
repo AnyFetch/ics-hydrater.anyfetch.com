@@ -11,7 +11,7 @@ var ics = require('../lib');
 var spyPost = sinon.spy(Anyfetch.prototype, 'postDocument');
 var spyDelete = sinon.spy(Anyfetch.prototype, 'deleteDocumentByIdentifier');
 
-var server = Anyfetch.createTestServer();
+var server = Anyfetch.createMockServer();
 server.listen(1338, function() {
   console.log('Server listen on port 1338');
 });
