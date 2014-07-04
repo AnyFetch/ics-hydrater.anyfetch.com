@@ -40,12 +40,12 @@ describe('Check results of ICS hydrater', function() {
     });
   });
 
-  it('check numbers of created document', function(done) {
+  it('checks the number of created document', function(done) {
     spyPost.callCount.should.eql(9);
     done();
   });
 
-  it('check numbers of deleted document', function(done) {
+  it('checks the number of deleted document', function(done) {
     spyDelete.callCount.should.eql(1);
     done();
   });
