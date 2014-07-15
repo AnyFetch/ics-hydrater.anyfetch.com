@@ -13,7 +13,7 @@
   "main": "./lib/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnyFetch/ics.hydrater.anyfetch.com"
+    "url": "https://github.com/AnyFetch/ics-hydrater.anyfetch.com"
   },
   "keywords": [
     "anyfetch",
