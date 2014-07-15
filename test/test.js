@@ -31,13 +31,17 @@ describe('Check results of ICS hydrater', function() {
 
     var changes = anyfetchHydrater.defaultChanges();
 
-    ics('./test/samples/calendar.ics', document, changes, function(err, changes) {
+    function cb(err, changes) {
       if(err) {
         done(err);
       }
       changes.should.eql({});
       done();
-    });
+    }
+
+    cb.apiUrl = "http://localhost:1338";
+
+    ics('./test/samples/calendar.ics', document, changes, cb);
   });
 
   it('checks the number of created document', function(done) {
