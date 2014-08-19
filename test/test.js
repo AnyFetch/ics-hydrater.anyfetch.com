@@ -1,6 +1,6 @@
 'use strict';
 
-require('should');
+var should = require('should');
 
 var Anyfetch = require('anyfetch');
 var anyfetchHydrater = require('anyfetch-hydrater');
@@ -35,7 +35,8 @@ describe('Check results of ICS hydrater', function() {
       if(err) {
         done(err);
       }
-      changes.should.eql({});
+
+      should(changes).be.null;
       done();
     }
 
