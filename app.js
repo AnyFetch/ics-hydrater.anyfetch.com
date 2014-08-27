@@ -4,10 +4,10 @@
 var anyfetchHydrater = require('anyfetch-hydrater');
 
 var config = require('./config/configuration.js');
-
+<
 var serverConfig = {
   concurrency: config.concurrency,
-  hydrater_function: './lib/index.js'
+  hydrater_function: __diname + '/lib/index.js'
 };
 
 var server = anyfetchHydrater.createServer(serverConfig);
