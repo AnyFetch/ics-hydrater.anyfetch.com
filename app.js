@@ -4,7 +4,7 @@
 var anyfetchHydrater = require('anyfetch-hydrater');
 
 var config = require('./config/configuration.js');
-<
+
 var serverConfig = {
   concurrency: config.concurrency,
   hydrater_function: __diname + '/lib/index.js'
