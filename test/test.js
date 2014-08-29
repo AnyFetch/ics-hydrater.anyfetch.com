@@ -16,9 +16,11 @@ server.listen(1338, function() {
   console.log('Server listen on port 1338');
 });
 
+
 after(function() {
   server.close();
 });
+
 
 describe('Check results of ICS hydrater', function() {
   it('should not have error', function(done) {
