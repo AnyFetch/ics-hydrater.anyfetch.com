@@ -1,6 +1,6 @@
 'use strict';
 
-require('should');
+var should = require('should');
 
 var Anyfetch = require('anyfetch');
 var anyfetchHydrater = require('anyfetch-hydrater');
@@ -16,9 +16,11 @@ server.listen(1338, function() {
   console.log('Server listen on port 1338');
 });
 
+
 after(function() {
   server.close();
 });
+
 
 describe('Check results of ICS hydrater', function() {
   it('should not have error', function(done) {
@@ -35,7 +37,8 @@ describe('Check results of ICS hydrater', function() {
       if(err) {
         done(err);
       }
-      changes.should.eql({});
+
+      should(changes).be.null;
       done();
     }
 
