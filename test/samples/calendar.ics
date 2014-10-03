@@ -7,6 +7,9 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 SUMMARY;CHARSET=utf-8:Dyncon 2011
 LOCATION;CHARSET=utf-8:Stockholm, Sweden
+ORGANIZER;CN=John Smith:MAILTO:jsmith@host.com
+ATTENDEE;CN=John Smith:MAILTO:jsmith@host.com
+ATTENDEE;CN=John Do:MAILTO:jsdo@host.com
 URL:http://lanyrd.com/2011/dyncon/
 UID:d4c826dfb701f611416d69b4df81caf9ff80b03a
 DTSTART:20110312T200000Z
@@ -23,6 +26,8 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY;CHARSET=utf-8:JSConf US 2011
 LOCATION;CHARSET=utf-8:Portland, United States
+ORGANIZER;CN=John Smith:MAILTO:jsmith@host.com
+ATTENDEE;CN=John Do:MAILTO:jsdo@host.com
 URL:http://lanyrd.com/2011/jsconf/
 UID:ed334cc85db5ebdff5ff5a630a7a48631a677dbe
 DTSTART;VALUE=DATE:20110502
