@@ -42,6 +42,20 @@ describe('Check results of ICS hydrater', function() {
       done();
     }
 
+    server.override('post', '/documents', function(req, res, next) {
+      if(req.params.metadata.attendee && req.params.metadata.attendee.length !== 0) {
+        try {
+          req.params.metadata.attendee.should.have.lengthOf(2);
+        }
+        catch (e) {
+          return done(e);
+        }
+      }
+
+      res.send(200);
+      next();
+    });
+
     cb.apiUrl = "http://localhost:1338";
 
     ics('./test/samples/calendar.ics', document, changes, cb);
